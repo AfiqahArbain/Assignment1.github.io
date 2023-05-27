@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+  
+    <head>
+        <link rel="stylesheet"
+        href="index_style.css">
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+
+            @media screen and (max-width:600px) {
+                    .column {
+                    width: 100%;
+                    }
+                }
+
+          body {
+              margin: 0;
+              background-image: url("b4.png");
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+          }
+      
+          .content {
+          border: 2px solid black;
+          margin: 50px 400px 50px 400px;
+          background-color:rgb(255, 240, 245);
+        }
+      
+          h3{
+          color:black;
+          font-family: 'Georgia';
+          font-weight: bold ;
+          text-decoration-line: underline;
+      }
+      
+      
+      </style>
+      
+     </head>
+     
+        <body>
+            <ul>
+                <li><a href="index.html">Home &nbsp;<i class="fa fa-home" style="font-size:24px;color:white"></i></a></li>
+                <li><a href="about.html">About Us &nbsp;<i class="fa fa-user-circle" style="font-size:24px;color:white"></i></a></li>
+                <li><a href="items.html">AG Brands &nbsp;<i class="fa fa-navicon" style="font-size:24px;color:white"></i></a></li>
+                <li><a class="active" href="order.html">Order &nbsp;<i class="fa fa-shopping-basket" style="font-size:24px;color:white"></i></a></li>
+                <li><a href="store.html">Store &nbsp;<i class="fa fa-compass" style="font-size:24px;color:white"></i></a></li>
+              </ul>
+              
+              <br>
+
+              <h2>Let's Online Order and Self Pickup<i class="fa fa-shopping-basket" style="font-size:30px;color:black"></i></h2>
+             
+            <div class="content"> 
+
+
+              <fieldset>
+              <legend><h3>Order Form</h3></legend>
+                <br>
+              Name: <input type="text" id="name" size="40"> <br><br>
+              Phone Number: <input type="text" id="phone"> <br><br>
+              Address : <input type="text" id="address" size="80"> <br><br><br><br>
+
+              Instruction: Please input amount for each of the fruits.
+              <br>Please enter 0, if you do not want to buy the fruits.
+              <br><br>
+              Red Apple: <input type="text" id="red" size="7">/kg <br><br>
+              Green Apple: <input type="text" id="green" size="7">/kg <br><br>
+              Grape: <input type="text" id="grape" size="7">/kg <br><br>
+              Mango: <input type="text" id="mango" size="7">/(2 pcs) <br><br>
+              Dragon Fruit: <input type="text" id="dragon" size="7">/(2 pcs) <br><br>
+              Orange: <input type="text" id="orange" size="7">/kg <br><br>
+              Strawberry: <input type="text" id="strawberry" size="7">/pack <br><br>
+
+             <br> 
+             <button onclick="order()">Order My Fruits</button>
+
+             <br><br><br>
+              ----------------------------------------------------------------------------------------------------------------------------
+
+              <h3>Your Order</h3>
+            Name:<b class="dname"></b><br>
+            Phone Number: <b class="dphone"></b><br>
+            Address: <b class="daddress"></b><br><br>
+
+            FRUITS<br>
+            1. Red Apple: <b class="dred"></b>kg<br>
+            2. Green Apple: <b class="dgreen"></b>kg<br>
+            3. Grape:<b class="dgrape"></b>kg<br>
+            4. Mango: <b class="dmango"></b>(2pcs)<br>
+            5. Dragon Fruit: <b class="ddragon"></b>(2pcs)<br>
+            6. Orange:<b class="dorange"></b>kg<br>
+            7. Strawberry: <b class="dstrawberry"></b>packs<br><br>
+            <strong>
+            <br>
+            Total Price: RM<b class="price"></b><br>
+            Thank You!!
+            </strong>
+
+            <script>
+
+                function order() {
+                var x= document.getElementById("name").value;
+                var y= document.getElementById("phone").value;
+                var z= document.getElementById("address").value;
+                var a= parseFloat(document.getElementById("red").value);
+                var b= parseFloat(document.getElementById("green").value);
+                var c= parseFloat(document.getElementById("grape").value);
+                var d= parseFloat(document.getElementById("mango").value);
+                var e= parseFloat(document.getElementById("dragon").value);
+                var f= parseFloat(document.getElementById("orange").value);
+                var g= parseFloat(document.getElementById("strawberry").value);
+
+                var totalOrder= calcOrder(a, b, c, d, e, f, g )
+
+                
+                document.getElementsByClassName("dname")[0].innerHTML = x;
+                document.getElementsByClassName("dphone")[0].innerHTML = y;
+                document.getElementsByClassName("daddress")[0].innerHTML = z;
+                document.getElementsByClassName("dred")[0].innerHTML = a;
+                document.getElementsByClassName("dgreen")[0].innerHTML = b;
+                document.getElementsByClassName("dgrape")[0].innerHTML = c;
+                document.getElementsByClassName("dmango")[0].innerHTML = d;
+                document.getElementsByClassName("ddragon")[0].innerHTML = e;
+                document.getElementsByClassName("dorange")[0].innerHTML = f;
+                document.getElementsByClassName("dstrawberry")[0].innerHTML = g;
+                document.getElementsByClassName("price")[0].innerHTML = totalOrder.toFixed(2);
+            }
+
+            function calcOrder(a, b, c, d, e, f, g){
+              return (a*14.99)+(b*16.99)+(c*13.90)+(d*5.65)+(e*6.99)+(f*15.99)+(g*23.99);
+            }
+
+
+            </script>
+
+           
+            </fieldset>
+          </div>
+            <center>
+            <p id="copy">&copy; All rights reserved. <i>Arbain Sdn. Bhd.</i></p>
+            </center>
+
+        </body>
+
+
+
+
+
+</html>

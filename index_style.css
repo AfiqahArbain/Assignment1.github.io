@@ -1,0 +1,91 @@
+/*AFIQAH ASYIKIN BINTI ARBAIN
+2022496236
+RCDCS2512A*/
+
+
+h1 { 
+    color:rgb(222, 184, 135);
+    font-family: 'Brush Script MT';
+    font-weight: bold ;
+    font-size: 70px;
+    text-align: center;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+h2{
+  color:black;
+  font-family: 'Georgia';
+  font-weight: bold ;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+h3{
+  color:black;
+  font-family: 'Georgia';
+  font-weight: bold ;
+  font-size: 40px;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  text-decoration-line: underline;
+  }
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: #111;
+}
+
+.active {
+  background-color:rgb(222, 184, 135);
+}
+
+.A1{
+  background-color:rgb(250, 235, 215);
+}
+
+.row::after{
+  content:"";
+  clear:both;
+  display: table;
+}
+
+.column {
+  float: center;
+  width: 33%;
+  padding:5px;
+  background-color: antiquewhite;
+}
+
+.desc{
+  font-size: 25px;
+}
+
+.button{
+  background-color: pink;
+  color: black;
+  border-color: black;
+  border-radius: 1.4rem;
+  max-width: 140px;
+  padding:0.5rem 1rem;
+}
